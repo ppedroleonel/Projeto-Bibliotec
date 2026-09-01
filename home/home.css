@@ -65,7 +65,7 @@ a {
 
 .texto-banner p {
     font-size: 1.5em;
-    width: 50%;
+    width: 60%;
 }
 
 .botao {
@@ -77,6 +77,14 @@ a {
 
     font-size: 1.2em;
     font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.botao:hover {
+    background-color: #2ab2ab;
+    color: var(--branco);
+    cursor: pointer;
 }
 
 .banner-principal img {
@@ -84,3 +92,120 @@ a {
     width: 35%;
 }
 
+/* Titulo das seções */
+
+.titulo-secao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-secao h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.titulo-secao span {
+    display: flex;
+    width: 250px;
+    height: 4px;
+    background-color: var(--cor-destaque);
+}
+
+/* seção benefecios */
+
+.beneficios {
+    padding: 50px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.beneficios-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    gap: 10%;
+
+    justify-content: center;
+}
+
+.beneficio {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 20px 50px;
+
+    border: 1px solid var(--azul-escuro);
+    border-radius: 30px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);  /* x, y, blur, cor com transparencia)*/
+
+
+    text-align: center;
+
+    /* cria referencia de posicionamento para o icone quando o icone for posicionado, usa esse card como referencia */
+    /* sem isso, o circulo poderia usar outro elemento da pagina como referencia e sair passeando pelo layout. */
+    position: relative;     
+}
+
+.beneficio-icone img {
+    width: 50%;
+}
+
+.beneficio-icone {
+    border: 4px solid var(--cor-destaque);
+    background-color: var(--branco);
+    border-radius: 50%;
+    
+    width: 30%;
+    height: 30%;
+
+    /* Retira o icone do fluxo normal, com o absolute ele pode ficar por cima do card */ /* eh tipo vc deixar ele acima do grupo q eh o card no figma */
+    position: absolute;
+    
+    /* Move o circulo pra cima, o valor negativo faz com ele consiga sair parcialmente do card.*/
+    top: -15%;
+    
+    /* coloca o começo do elemento em 50% da largura do card*/
+    left: 50%;
+
+    /*ajustamos o posicionamento do elemento, mas a borda esquerda do circulo fica no centro, não o circulo inteiro */
+    /* por isso usamos o transform: translateX(-50%); que move o próprio circulo para a esquerda em 50% da largura dele, fazendo com que o circulo fique perfeitamente centralizado.*/
+    transform: translateX(-50%);
+
+    display: grid;
+
+    /* place-items: center; é a mesma coisa que colocar:
+        align-itens: center e justify-items: center */
+    place-items: center;
+}
+
+.beneficio h3 {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    width: 90%;
+}
+
+.beneficio p {
+    font-size: 1em;
+    width: 80%;
+}
+
+.banner-meio {
+    height: 60vh;
+
+    background-image: url(../imgs/Banner\ centro.svg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 0 120px;
+    color: var(--branco);
+}
