@@ -209,3 +209,30 @@ a {
     padding: 0 120px;
     color: var(--branco);
 }
+
+.livros-recomendados {
+    padding: 50px 120px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 100px;
+}
+
+.todos-livros {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    gap: 80px;
+}
+
+.livro h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 20px 0px;
+}
+
