@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliotec - Livros Reservados</title>
+
+    <link rel="stylesheet" href="reservados.css">
+    <link rel="stylesheet" href="../../styles/global.css">
+
+    <link rel="shortcut icon" href="../../imgs/Icone - Bibliotec.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body class="pagina-listagem">
+    <aside class="menu-lateral">
+        <div class="topo-menu">
+            <button class="botao-voltar">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <img src="../../imgs/Logo Menu Lateral.svg" alt="" class="logo">
+        </div>
+
+        <nav class="menu-navegacao">
+            <a href="#" class="item-menu">
+                <i class="fa-solid fa-user"></i>
+                <span>Perfil</span>
+            </a>
+
+            <a href="#" class="item-menu">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Cadastrar Usuário</span>
+            </a>
+
+            <a href="#" class="item-menu">
+                <i class="fa-solid fa-user-group"></i>
+                <span>Listar Usuários</span>
+            </a>
+
+            <a href="#" class="item-menu">
+                <i class="fa-solid fa-book-medical"></i>
+                <span>Cadastrar Livro</span>
+            </a>
+
+            <a href="#" class="item-menu">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span>Listar Livros</span>
+            </a>
+
+            <a href="#" class="item-menu ativo">
+                <i class="fa-solid fa-address-book"></i>
+                <span>Livros Reservados</span>
+            </a>
+        </nav>
+
+        <a href="#" class="botao-sair">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Sair</span>
+        </a>
+    </aside>
+
+    <!-- Cabecalho do conteudo -->
+
+    <main class="conteudo-listagem">
+        <section class="cabecalho-pagina">
+            <h1>Listar Reservas</h1>
+            <p>Gerencie e acompanhe os livros reservados</p>
+        </section>
+
+        <!-- Card Principal -->
+         <section class="card-listagem">
+            <div class="area-busca">
+                <div class="campo-busca">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar reserva por nome...">
+                </div>
+
+                <button class="botao-filtro">
+                    <i class="fa-solid fa-sliders"></i> 
+                    <span>Filtros</span>
+                </button>
+            </div>
+
+            <!-- Cabeçalho dos reservados -->
+             <div class="cabecalho-reservados">
+                <h2>Nome</h2>
+                <h2>Usuário</h2>
+                <h2>Data Reserva</h2>
+                <h2>Status</h2>
+                <h2>Retirado</h2>
+             </div>
+
+             <!-- Reservas -->
+              <div class="lista-reservas">
+                <!-- Reserva 1 -->
+                 <article class="reserva">
+                    <p class="nome-livro">TI para Negócios</p>
+                    <p class="usuario">João Silva</p>
+                    <p class="data-reserva">18/07/2026</p>
+                    <p class="status-reserva"> <span id="modificar-js-status">Aguardando Retirada</span></p>
+                    
+                    <button type="button" id="btn-marcar-retirado"></button>
+                 </article>
+
+                <!-- Reserva 2 -->
+                 <article class="reserva">
+                    <p class="nome-livro">TI para Negócios</p>
+                    <p class="usuario">João Silva</p>
+                    <p class="data-reserva">18/07/2026</p>
+                    <p class="status-reserva"> <span id="modificar-js-status">Aguardando Retirada</span></p>
+
+                    <button type="button" id="btn-marcar-retirado"></button>
+                 </article>
+
+                <!-- Reserva 3 -->
+                 <article class="reserva">
+                    <p class="nome-livro">TI para Negócios</p>
+                    <p class="usuario">João Silva</p>
+                    <p class="data-reserva">18/07/2026</p>
+                    <p class="status-reserva"> <span id="modificar-js-status">Aguardando Retirada</span></p>
+
+                    <button type="button" id="btn-marcar-retirado"></button>
+                 </article>
+
+                <!-- Reserva 4 -->
+                 <article class="reserva">
+                    <p class="nome-livro">TI para Negócios</p>
+                    <p class="usuario">João Silva</p>
+                    <p class="data-reserva">18/07/2026</p>
+                    <p class="status-reserva"> <span id="modificar-js-status">Aguardando Retirada</span></p>
+
+                    <button type="button" id="btn-marcar-retirado"></button>
+                 </article>
+
+                <!-- Reserva 5 -->
+                 <article class="reserva">
+                    <p class="nome-livro">TI para Negócios</p>
+                    <p class="usuario">João Silva</p>
+                    <p class="data-reserva">18/07/2026</p>
+                    <p class="status-reserva"> <span id="modificar-js-status">Aguardando Retirada</span></p>
+
+                    <button type="button" id="btn-marcar-retirado"></button>
+                 </article>
+              </div>
+
+              <!-- rodape dos reservados -->
+             <div class="rodape-reservados">
+                <p class="quantidade-livros">Mostrando 1 de 1 livros</p>
+                 
+                <!-- Paginacao -->
+                 <div class="paginacao">
+                    <button class="botao-pagina">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    
+                    <span class="pagina-atual">1</span>
+                    <button class="botao-pagina">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    
+                 </div>
+             </div>
+         </section>
+    </main>
+    
+</body>
+</html>
