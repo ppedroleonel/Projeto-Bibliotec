@@ -63,8 +63,12 @@
 
     gap: 20px;
 
+    color: var(--texto);
+
+    font-size: 1em;
+    font-weight: 600;
+
     cursor: pointer;
-    
     transition: 0.2s;
 }
 
@@ -111,6 +115,7 @@
     gap: 20px;
 }
 
+/*
 .reserva {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
@@ -126,14 +131,66 @@
 
     font-size: 1em;
 }
+*/
+
+.reserva {
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 0 30px;
+    border: 1px solid var(--cor-bordas);
+    border-radius: 10px;
+    font-size: 1m;
+}
+.aguardando {
+    color: #D34A00;
+}
+
+.retirado {
+    color: #00A223;
+}
+
+.reserva p {
+    justify-self: center;
+    text-align: center;
+}
 
 .reserva p:nth-child(1) {
     justify-self: flex-start;
 }
 
+input[type="checkbox"] {
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--textos-paginas);
+    border-radius: 5px;
+    appearance: none;
+    cursor: pointer;
+    justify-self: center;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--cor-destaque);
+    border: none;
+}
+
+input[type="checkbox"]:checked::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    content: "✓";
+    color: var(--branco);
+    font-size: 20px;
+    font-weight: 800;
+}
+
 /* rodape da listagem */
 
-.rodape-reservados {
+.rodape-reservados   {
     margin-top: 30px;
     padding-top: 10px;
 
@@ -182,6 +239,4 @@
 
     font-size: 0.8em;
     font-weight: 700;
-
-
 }
